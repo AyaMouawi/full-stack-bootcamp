@@ -101,3 +101,18 @@ console.log(booleanValue >= numberValue); // compare numbers
 
 console.log(stringValue < numberValue); 
 console.log(numberValue <= stringValue); // can also compare strings 
+
+//Step 8
+
+const result0 = 5 + 3 * 2;
+const result1 = 10 / 2 + 3;
+const result2 = 10 / (2 + 3);
+
+console.log('result0:', result0); 
+console.log('result1:', result1); 
+console.log('result2:', result2); 
+
+
+console.log('Explanation of Difference:');
+console.log('result1 performs division first, then addition: 10 / 2 + 3 = 8 because there is no ()');
+console.log('result2 uses () to do the addition before division: 10 / (2 + 3) = 2');
