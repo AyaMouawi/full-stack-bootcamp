@@ -84,3 +84,20 @@ const result = Description + ' ' + Pet;
 
 console.log(result);
 
+//Step 7
+
+const numberValue = 5;
+const stringValue = '5';
+const booleanValue = true;
+
+console.log(numberValue === stringValue); 
+console.log(numberValue !== stringValue); // These 2 compare types
+
+console.log(numberValue == stringValue); 
+console.log(numberValue != stringValue); // they correct the type and then compare values
+
+console.log(numberValue > booleanValue); 
+console.log(booleanValue >= numberValue); // compare numbers 
+
+console.log(stringValue < numberValue); 
+console.log(numberValue <= stringValue); // can also compare strings 
