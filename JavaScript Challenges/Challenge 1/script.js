@@ -1,9 +1,10 @@
 console.log('I am linked now!');
-
+//Step 1
 var name;
 name = 'Aya Mouawi';
 alert('My name is ' + name);
 
+//Step 2 
 var age = 20;
 let lastName = 'Aya';
 const DOB = '12-7-2003';
@@ -24,7 +25,7 @@ console.log('age:', age);
 console.log('lastName:', lastName);
 console.log('DOB:', DOB);
 
-
+//Step 4
 console.log(typeof "This is a text"); 
 console.log(typeof true); 
 console.log(typeof false); 
@@ -52,7 +53,7 @@ console.log('vObject:', vObject, typeof vObject);
 console.log('vArray:', vArray, typeof vArray);
 console.log('vNull:', vNull, typeof vNull);
 
-
+//Step 5
 const myText = "I am Aya!";
 
 const counter = 3;
@@ -72,4 +73,14 @@ console.log('backtick:', 'Allows multiline text and supports interpolation');
 console.log('singleQuote:', 'Does not support interpolation');
 console.log('doubleQuote:', 'Does not support interpolation');
 console.log('tryThisAlso:', 'Uses interpolation for calculations within the string');// i used some chatgpt with this step
+
+//Step 6
+
+const Pet = 'Cat';
+const Description = 'Cute';
+
+
+const result = Description + ' ' + Pet;
+
+console.log(result);
 
