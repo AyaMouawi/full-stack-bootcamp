@@ -51,3 +51,25 @@ console.log('vBoolean:', vBoolean, typeof vBoolean);
 console.log('vObject:', vObject, typeof vObject);
 console.log('vArray:', vArray, typeof vArray);
 console.log('vNull:', vNull, typeof vNull);
+
+
+const myText = "I am Aya!";
+
+const counter = 3;
+const backtick = `This is my text using backticks ${counter} times`;
+const singleQuote = 'This is my text using single quotations ${counter} times';
+const doubleQuote = "This is my text using double quotations ${counter} times";
+const tryThisAlso = `This is my new version, it’s the ${2 + 3}th version`;
+
+console.log('myText:', myText);
+console.log('backtick:', backtick);
+console.log('singleQuote:', singleQuote);
+console.log('doubleQuote:', doubleQuote);
+console.log('tryThisAlso:', tryThisAlso);
+
+console.log('Differences in String Declaration Methods:');
+console.log('backtick:', 'Allows multiline text and supports interpolation');
+console.log('singleQuote:', 'Does not support interpolation');
+console.log('doubleQuote:', 'Does not support interpolation');
+console.log('tryThisAlso:', 'Uses interpolation for calculations within the string');// i used some chatgpt with this step
+
