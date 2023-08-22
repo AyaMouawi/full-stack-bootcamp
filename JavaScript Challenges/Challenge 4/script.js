@@ -23,5 +23,8 @@ const additionalInfo = {
 
 const fullInfo = { ...personalInfo, ...additionalInfo };
 
+//Step 3 
 
+const [firstNum, secondNum, thirdNum] = fiveNumbers;
+const { name, location, nationality } = personalInfo;
 
