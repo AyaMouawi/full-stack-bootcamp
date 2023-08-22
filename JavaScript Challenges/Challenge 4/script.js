@@ -1,4 +1,5 @@
 //Step 1
+
 const fiveNumbers = [12, 7, 3, 20, 23];
 
 const personalInfo = {
@@ -8,3 +9,19 @@ const personalInfo = {
   location: "Beirut",
   nationality: "Lebanese"
 };
+
+//Step 2 
+
+const nextThreeNumbers = [42, 56, 68];
+const allNumbers = [...fiveNumbers, ...nextThreeNumbers];
+
+const additionalInfo = {
+  occupation: "student",
+  hobby: "Reading",
+  education: "In progress"
+};
+
+const fullInfo = { ...personalInfo, ...additionalInfo };
+
+
+
