@@ -23,8 +23,26 @@ const additionalInfo = {
 
 const fullInfo = { ...personalInfo, ...additionalInfo };
 
-//Step 3 
+//Step 3  this was kinda confusing 
 
 const [firstNum, secondNum, thirdNum] = fiveNumbers;
 const { name, location, nationality } = personalInfo;
 
+//Step 4 
+
+const personalInfo2 = {
+    name: "Aya Mouawi 2 ",
+    age: 22,
+    contactInfo: {
+      email: "ayamouawi8@gmail.com",
+      phone: "71 860 410 "
+    }
+  };
+  
+  const { contactInfo: { email, phone } } = personalInfo;
+  const [firstNum2, secondNum2, ...restOfNumbers] = fiveNumbers;
+
+  const ob1 = { a: 1, b: 2, c: 3 };
+  const ob2 = { b: 4, c: 5, d: 6 };
+
+  const mergedObject = { ...ob1, ...ob2 };
