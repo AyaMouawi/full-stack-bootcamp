@@ -56,3 +56,44 @@
         console.log('Name:', name);
         console.log('Email:', email);
         });
+
+
+//Step 3 veryy confusing needed alot of googling no one saved me but chatgpt, But i understood the concept 
+
+        const cloneBtn = document.getElementById('clone-btn');
+        let isCloned = false;
+        let clonedDiv = null;
+
+        cloneBtn.addEventListener('click', () => {
+        if (!isCloned) {
+            clonedDiv = originalDiv.cloneNode(true);
+            clonedDiv.id = 'cloned-original';
+            document.body.appendChild(clonedDiv);
+            isCloned = true;
+            cloneBtn.textContent = 'Hide Clone';
+        } else {
+            document.body.removeChild(clonedDiv);
+            isCloned = false;
+            cloneBtn.textContent = 'Show Clone';
+        }
+        });
+
+        const removeHeaderBtn = document.createElement('button');
+        removeHeaderBtn.textContent = 'Remove Header';
+        document.body.appendChild(removeHeaderBtn);
+
+        removeHeaderBtn.addEventListener('click', () => {
+        const header = document.querySelector('header');
+        header.remove();
+        });
+
+
+        function insertBeforeFooter(element) {
+        const footer = document.querySelector('footer');
+        footer.parentNode.insertBefore(element, footer);
+        }
+
+
+        const newElement = document.createElement('div');
+        newElement.textContent = 'New Element Before Footer';
+        insertBeforeFooter(newElement);
