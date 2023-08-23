@@ -29,6 +29,30 @@
 
     document.body.appendChild(containerDiv);
 
+//Step 2 
 
+        const colorChangeBtn = document.getElementById('color-change-btn');
+        colorChangeBtn.addEventListener('mouseover', () => {
+        colorChangeBtn.style.backgroundColor = 'green';
+        });
+        colorChangeBtn.addEventListener('mouseout', () => {
+        colorChangeBtn.style.backgroundColor = '';
+        });
 
-    
+        const originalDiv = document.getElementById('original');
+        originalDiv.addEventListener('click', (event) => {
+        if (event.target.tagName === 'BUTTON') {
+            console.log('Clicked button text:', event.target.textContent);
+        }
+        });
+
+        const userForm = document.getElementById('user-form');
+        userForm.addEventListener('submit', (event) => {
+        event.preventDefault(); 
+
+        const name = userForm.querySelector('#name').value;
+        const email = userForm.querySelector('#email').value;
+
+        console.log('Name:', name);
+        console.log('Email:', email);
+        });
