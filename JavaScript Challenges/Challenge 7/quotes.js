@@ -94,3 +94,82 @@ const quotesArray = [
       "Hell, there are no rules here-- we're trying to accomplish something.",
   },
 ];
+
+
+//Step 2 
+
+/*const blockquoteElement = document.createElement('blockquote');
+blockquoteElement.textContent =
+  '"I think that beauty can injure you to death. It can cause an injury that can ' +
+  'never be cured. Or it can so traumatise you, your life changes direction. The ' +
+  'beauty of the harmony of nature that is forever lost, or a daily rite that you ' +
+  'perform, or diving into the sea for a swim. Those experiences are going to ' +
+  'mark you."';
+
+const authorDiv = document.createElement('div');
+authorDiv.className = 'author';
+const citeElement = document.createElement('cite');
+citeElement.textContent = 'Toni Servillo';
+const emDash = document.createElement('span');
+emDash.textContent = '—';
+
+authorDiv.appendChild(emDash);
+authorDiv.appendChild(citeElement);
+
+blockquoteElement.appendChild(authorDiv);
+
+const quotesContainer = document.getElementById('quotes');
+quotesContainer.appendChild(blockquoteElement);*/
+
+
+
+for (const quote of quotesArray) {
+  const blockquoteElement = document.createElement('blockquote');
+  blockquoteElement.textContent = quote.content;
+
+  const authorDiv = document.createElement('div');
+  authorDiv.className = 'author';
+  const citeElement = document.createElement('cite');
+  citeElement.textContent = quote.author;
+  const emDash = document.createElement('span');
+  emDash.textContent = '—';
+
+  authorDiv.appendChild(emDash);
+  authorDiv.appendChild(citeElement);
+  blockquoteElement.appendChild(authorDiv);
+  const quotesContainer = document.getElementById('quotes');
+  quotesContainer.appendChild(blockquoteElement);
+}
+
+
+const inputElement = document.getElementById('authorSearch');
+const buttonElement = document.getElementById('authorBtn');
+const quotesContainer = document.getElementById('quotes');
+
+buttonElement.addEventListener('click', () => {
+  const searchTerm = inputElement.value.trim().toLowerCase();
+  quotesContainer.innerHTML = '';
+
+  for (const quote of quotesArray) {
+    const author = quote.author.toLowerCase();
+    if (author.includes(searchTerm)) {
+     
+      const blockquoteElement = document.createElement('blockquote');
+      blockquoteElement.textContent = quote.content;
+
+      const authorDiv = document.createElement('div');
+      authorDiv.className = 'author';
+      const citeElement = document.createElement('cite');
+      citeElement.textContent = quote.author;
+      const emDash = document.createElement('span');
+      emDash.textContent = '—';
+
+      authorDiv.appendChild(emDash);
+      authorDiv.appendChild(citeElement);
+
+      blockquoteElement.appendChild(authorDiv);
+
+      quotesContainer.appendChild(blockquoteElement);
+    }
+  }
+});
