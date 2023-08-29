@@ -21,21 +21,20 @@ emailInput.type = 'email';
 emailInput.placeholder = 'Email';
 emailInput.required = true;
 
-
 const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 emailInput.addEventListener('input', function () {
   if (emailPattern.test(emailInput.value)) {
     emailInput.setCustomValidity('');
-    emailErrorMessage.textContent = '';
+    emailErrorMessage.textContent = ''; // Clear the error message
   } else {
     emailInput.setCustomValidity('Please enter a valid email address');
-    emailErrorMessage.textContent = 'Please enter a valid email address'; 
+    emailErrorMessage.textContent = 'Please enter a valid email address'; // Show error message
   }
 });
 
 emailLabel.appendChild(emailInput);
 
-
+// Create email error message element
 const emailErrorMessage = document.createElement('p');
 emailErrorMessage.textContent = '';
 emailErrorMessage.style.color = 'red';
@@ -66,10 +65,10 @@ cPasswordErrorMessage.style.color = 'red';
 cPasswordErrorMessage.style.display = 'none';
 formElement.appendChild(cPasswordErrorMessage);
 
-
+// Add event listener to the cPasswordInput for password confirmation
 cPasswordInput.addEventListener('input', function () {
   if (cPasswordInput.value === passwordInput.value) {
-    cPasswordErrorMessage.style.display = 'none';
+    cPasswordErrorMessage.style.display = 'none'; // Clear the error message
   } else {
     cPasswordErrorMessage.style.display = 'block'; 
   }
